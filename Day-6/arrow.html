@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function Example</title>
+</head>
+<body>
+
+    <h2 id="output"></h2>
+
+    <script>
+        // Arrow function
+        let welcome = (name, age) => {
+            return "Hello & Welcome " + name + ", Age: " + age;
+        };
+
+        // Call function
+        let result = welcome("Yahoo Baba", 25);
+
+        // Show output in HTML
+        document.getElementById("output").innerHTML = result;
+
+        // Also log in console
+        console.log(result);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using getElementById</title>
+</head>
+<body>
+    <h1>Email Form Validation</h1>
+    <form name="myForm">
+       <h2> Email:<input type="text" id="email" ><br><br>
+        Password:<input type="password" id="pass" ><br><br></h2>
+        <input type="button" value="Submit" onclick="f()">
+    </form>
+    <script>
+        function f(){
+            var a = document.getElementById("email").value;
+            var pattern = "^[\\w-_\.]*[\\w-_\.]\@[\\w]\.+[\\w]+[\\w]$";
+            var regex = new RegExp(pattern);
+            if(regex.test(a))
+        {
+                alert("valid");
+        }
+        else{
+            alert("Invalid");
+        }
+        }
+    </script>
+</body>
+</html>
