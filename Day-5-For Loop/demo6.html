@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="return ValidateForm()">
+        <label> Password </label>
+        <input type="password" id="pass">
+        <input type="submit" value="submit">
+    </form>
+    <script>
+        function ValidateForm(){
+            let pass = document.getElementById("pass").value;
+
+            if(pass.length > 6){
+                alert("password is not valid");
+                return false;
+            }
+            return true;
+        }
+    </script>
+    
+</body>
+</html>
