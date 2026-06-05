@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FoodieHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 🔐 Login Check -->
+<script>
+if (!localStorage.getItem("loggedInUser")) {
+    window.location.href = "index.html";
+}
+</script>
+
+<!-- ✅ Navbar -->
+<nav class="navbar">
+    <h2>FoodieHub</h2>
+
+    <div class="nav-right">
+        <button id="adminBtn" onclick="goToAdmin()" style="display:none;">
+            Admin
+        </button>
+        <button onclick="logout()">Logout</button>
+    </div>
+</nav>
+
+<!-- ✅ Hero Section -->
+<section class="hero food-hero">
+    <h1>Delicious Food Delivered</h1>
+    <p>Order your favorite meals anytime</p>
+    <button class="hero-btn">Order Now</button>
+</section>
+
+<!-- ✅ Food Cards -->
+<section class="features">
+
+    <div class="card" onclick="showFood('Burger','Cheesy burger with fries','https://images.unsplash.com/photo-1568901346375-23c9450c58cd')">
+        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd">
+        <h3>Burger</h3>
+        <p>Cheesy & tasty burgers</p>
+    </div>
+
+    <div class="card" onclick="showFood('Pizza','Hot pizza with extra cheese','https://images.unsplash.com/photo-1600891964599-f61ba0e24092')">
+        <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092">
+        <h3>Pizza</h3>
+        <p>Hot & fresh pizza</p>
+    </div>
+
+    <div class="card" onclick="showFood('Pasta','Italian creamy pasta','https://images.unsplash.com/photo-1553621042-f6e147245754')">
+        <img src="https://images.unsplash.com/photo-1553621042-f6e147245754">
+        <h3>Pasta</h3>
+        <p>Italian special pasta</p>
+    </div>
+
+</section>
+
+<!-- ✅ Popup Box -->
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <span onclick="closePopup()" class="close">&times;</span>
+
+        <img id="foodImg">
+        <h2 id="foodTitle"></h2>
+        <p id="foodDesc"></p>
+
+        <button class="hero-btn">Order Now</button>
+    </div>
+</div>
+
+<!-- ✅ Footer -->
+<footer>
+    <p>© 2026 FoodieHub | All Rights Reserved</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

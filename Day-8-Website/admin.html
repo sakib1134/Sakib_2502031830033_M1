@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <h2>Admin</h2>
+    <ul>
+        <li onclick="showSection('dashboard')">Dashboard</li>
+        <li onclick="showSection('users')">Users</li>
+        <li onclick="logout()">Logout</li>
+    </ul>
+</div>
+
+<!-- Main Content -->
+<div class="main">
+
+    <!-- Top Bar -->
+    <div class="topbar">
+        <h2>Admin Dashboard</h2>
+    </div>
+
+    <!-- Dashboard Section -->
+    <div id="dashboard" class="section">
+        <div class="cards">
+            <div class="card-box">
+                <h3>Total Users</h3>
+                <p id="totalUsers">0</p>
+            </div>
+
+            <div class="card-box">
+                <h3>Status</h3>
+                <p>Active</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Users Section -->
+    <div id="users" class="section" style="display:none;">
+        <h3>All Users</h3>
+        <ul id="userList"></ul>
+    </div>
+
+</div>
+<script>
+if (!localStorage.getItem("loggedInUser")) {
+    window.location.href = "index.html";
+}
+</script>
+
+<script>
+let user = localStorage.getItem("loggedInUser");
+
+if (user !== "admin") {
+    alert("Access Denied ❌");
+    window.location.href = "home.html";
+}
+</script>
+
+
+<script src="script.js"></script>
+
+<script src="script.js"></script>
+
+<script src="script.js"></script>
+</body>
+</html>

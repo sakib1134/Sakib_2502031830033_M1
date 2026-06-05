@@ -1,0 +1,21 @@
+.a 
+{
+    color: brown;
+    background-color: aquamarine;
+    text-align: center;
+    margin: 50px;
+    padding: 5px;
+    border: solid 10px;
+}
+
+.b
+{
+    border: solid 2px;
+    border-color: rgb(255, 60, 0);
+    border-radius: 20px;
+
+}
+.abc
+{
+    text-align: center;
+}
